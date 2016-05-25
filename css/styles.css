@@ -1,0 +1,447 @@
+
+h1 {
+	font-size: 36px;
+	line-height: 30px;
+}
+
+@font-face {
+    font-family: 'pf_square_sans_promedium';
+    src: url('../fonts/pfsquaresanspro-medium-webfont.woff2')
+}
+
+@font-face {
+    font-family: 'pf_square_sans_prolight';
+    src: url('../fonts/pfsquaresanspro-light-webfont.woff2')
+}
+
+@font-face {
+    font-family: 'pf_square_sans_probold';
+    src: url('../fonts/pfsquaresanspro-bold-webfont.woff2')
+}
+
+body {
+	padding-top: 105px;
+}
+
+.wrapper {
+	max-width: 1920px;
+	min-width: 320px;
+	height: 100%;
+	background-image: url(../img/background.png);
+	background-position: top center;
+	background-size: cover;
+}
+
+.wrapper .container {
+	padding-top: 8px;
+}
+
+/*------------------------------header-----------*/
+header {
+	background-color: #1b1b1e;
+	max-width: 1920px;
+	min-height: 60px;
+	max-height: 122px;
+	border-bottom: 5px solid #3498db;
+}
+
+.bg-faded {
+	background-color: transparent;
+	padding: 0;
+}
+
+.navbar-light .navbar-nav .nav-link {
+	color: #d1d5d8;
+	font-family: 'pf_square_sans_promedium';
+	font-size: 20px;
+	line-height: 30px;
+	font-weight: normal;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+	color: #fab335;
+	border-bottom: 2px solid #fab335;
+}
+
+.navbar-nav .nav-item {
+	padding-bottom: 5px;
+}
+
+.nav {
+	float: right;
+	padding-top: 14px;
+}
+
+.mail {
+	display: block;
+	margin: 24px auto 28px auto;
+}
+
+a.mail:hover {
+    background-image: url(img/e-mail_network.png);
+    width: 40px;
+    height: 40px;
+}
+
+.navbar-toggler:focus, .navbar-toggler {
+	color: #ffffff;
+}
+
+/*------------------------------header-----------*/
+/*------------------------------aboutUs----------*/
+#aboutUs h1 {
+	color: #ebebeb;
+	font-weight: normal;
+	font-family: 'pf_square_sans_probold';
+	text-transform: uppercase;
+	border-bottom: 2px solid #ffffff;
+	display: inline-block;
+	padding-bottom: 15px;
+	margin-bottom: 11px;
+}
+
+.aboutUs-content {
+	padding: 46px 0 0 0;
+}
+
+#aboutUs ul {
+	padding-top: 24px;
+}
+
+#aboutUs li {
+	list-style-image: url(../img/rectangle.png);
+	background-repeat: no-repeat;
+	text-transform: uppercase;
+	color: #d1d5d8;
+	font-size: 24px;
+	font-family: 'pf_square_sans_promedium';
+	line-height: 30px;
+	padding-left: 20px;
+	padding-bottom: 5%;
+}
+/*------------------------------aboutUs----------*/
+/*------------------------------Picture_1----------*/
+
+.display {
+	float: right;
+	margin: -304px -33px 0 0;
+}
+
+/*------------------------------Picture_1----------*/
+/*------------------------------MobileApp----------*/
+
+.mobileApp {
+	margin-top: -52px;
+}
+
+.mobileApp h1 {
+	text-align: right;
+	color: #373f51;
+	font-family: 'pf_square_sans_probold';
+	text-transform: uppercase;
+}
+
+.mobileApp p {
+	text-align: right;
+	color: #373f51;
+	font-size: 24px;
+	font-family: 'pf_square_sans_promedium';
+	font-weight: normal;
+	padding-top: 4%;
+	line-height: 24px;
+}
+
+.mobileApp h2 {
+	color: #ebebeb;
+	font-size: 36px;
+	font-family: 'pf_square_sans_probold';
+	text-transform: uppercase;
+	margin-left: 17px;
+	border-bottom: 2px solid #ffffff; 
+	padding-bottom: 12px;
+	display: inline-block;
+}
+
+.mobileApp ul {
+	list-style: none;
+	list-style-image: url(../img/rectangle.png);
+	padding-top: 24px;
+}
+
+.mobileApp li {
+	color: #ebebeb;
+	font-size: 24px;
+	line-height: 43px;
+	padding-left: 10px;
+	font-family: 'pf_square_sans_promedium';
+}
+
+/*------------------------------MobileApp----------*/
+/*------------------------------portfolio_mobilaApp----------*/
+
+#portfolio_mobilaApp .container {
+	padding-top: 67px;
+}
+
+.slider {
+	width: 100%;
+	height: 260px;
+	margin: auto;
+}
+
+.item {
+	width: 310px;
+	height: 100%;
+	text-align: center;
+	line-height: 250px;
+	color: #000;
+	font-size: 30px;
+	margin: 0px 5px;
+	float: left;
+}
+
+.white {
+	background-color: #fff;
+}
+
+.controllers {
+	text-align: center;
+}
+
+.controllers span {
+	font-size: 30px;
+	display: inline-block;
+	cursor: pointer;
+	padding: 0 5px;
+	margin-top: 5px;
+	color: #fff;
+}
+
+.controllers {
+	float: right;
+	display: inline-block;
+	margin-top: 15px; 
+}
+/*------------------------------portfolio_mobilaApp----------*/
+/*------------------------------Java----------*/
+.Java {
+	padding-top: 96px;
+}
+
+.Java h1 {
+	text-transform: uppercase;
+	text-align: right;
+	color: #ebebeb;
+	font-family: 'pf_square_sans_probold';
+}
+
+.Java h2 {
+	text-transform: uppercase;
+	text-align: left;
+	color: #373f51;
+	font-family: 'pf_square_sans_probold';
+	border-bottom: 2px solid #373f51;
+	display: inline-block;
+	padding: 6px 0 10px 0;
+}
+
+.Java h3 {
+	text-transform: uppercase;
+	text-align: right;
+	color: #ebebeb;
+	font-size: 24px;
+	font-family: 'pf_square_sans_promedium';
+	padding-top: 25px;
+}
+
+.Java p {
+	text-align: left;
+	color: #373f51;
+	font-family: 'pf_square_sans_promedium';
+	font-size: 24px;
+	line-height: 30px;
+}
+
+.javaList li {
+	list-style-image: url(../img/rectangle1.png);
+	text-align: justify;
+	direction:rtl;
+	font-family: 'pf_square_sans_promedium';
+	font-size: 24px;
+	padding: 8px 26px 23px 0px;
+	line-height: 22px;
+	color: #ebebeb;
+
+}
+
+/*------------------------------Java----------*/
+/*------------------------------webDesign----------*/
+
+.webDesign {
+	padding-top: 39px;
+}
+
+.webDesign h1 {
+	text-transform: uppercase;
+	font-size: 48px;
+	padding-bottom: 37px;
+	font-family: 'pf_square_sans_probold';
+}
+
+.webDesign h2 {
+	text-transform: uppercase;
+	font-size: 36px;
+	padding: 26px 0 10px 0;
+	color: #373f51;
+	float: right;
+	border-bottom: 2px solid #373f51;
+	display: inline-block;
+	margin-bottom: 47px;
+	font-family: 'pf_square_sans_probold';
+}
+
+.webDesign p {
+	font-size: 24px;
+	color: #373f51;
+	font-family: 'pf_square_sans_promedium';
+	line-height: 26px;
+}
+
+.text1 {
+	text-align: justify;
+}
+
+.text2 {
+	text-align: right;
+}
+
+/*------------------------------webDesign----------*/
+/*------------------------------Picture_webDesign----------*/
+
+.picture_webDesign {
+	margin-top: -225px;
+	padding-bottom: 21px;
+}
+
+/*------------------------------Picture_webDesign----------*/
+/*------------------------------ourTeam----------*/
+
+.ourTeam {
+	padding: 102px 0 0 0;
+}
+
+#ourTeam h1 {
+	font-size: 48px;
+	padding-bottom: 90px;
+	color: #e74c3c;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: 'pf_square_sans_probold';
+}
+
+.btn-primary {
+	background-color: #36559e;
+	border-color: #36559e;
+	float: right;
+    margin-top: 64px;
+    padding: 6px 29px;
+    border-radius: 8px;
+    font-size: 24px;
+    font-family: 'pf_square_sans_promedium';
+}
+
+.ourTeam img {
+	display: block;
+	margin: 0 auto;
+}
+
+/*------------------------------ourTeam----------*/
+/*------------------------------software----------*/
+
+.software {
+	padding-top: 85px;
+	padding-bottom: 155px;
+}
+
+.software h1 {
+	font-size: 48px;
+	color: #373f51;
+	font-family: 'pf_square_sans_probold';
+	text-align: center;
+	text-transform: uppercase;
+	padding-bottom: 26px;
+	line-height: 50px;
+
+}
+
+.software p {
+	font-size: 24px;
+	font-family: 'pf_square_sans_promedium';
+	line-height: 28px;
+	padding-bottom: 15px;
+}
+
+/*------------------------------software----------*/
+
+
+
+/*------------------------------footer-----------------------*/
+
+footer {
+	max-width: 1920px;
+	background-color: #1b1b1e;
+	border-top: 10px solid #ffd35e;
+	padding-top: 10px;
+}
+
+footer ul {
+    text-align: justify;
+    padding: 0;
+}
+
+footer ul li  {
+    width: 14%;
+    height: 100%;
+    display: inline-block;
+    text-align: left;
+	/* эмуляция inline-block для IE6-7*/
+    //display : inline;
+    //zoom : 1;
+}
+
+ul li.helper {
+    width: 100%;
+    height: 0;
+    visibility: hidden;
+}
+
+#footer p {
+	color: #ffffff;
+	font-size: 14px;
+	line-height: 24px;
+	font-family: 'pf_square_sans_prolight';
+	padding-top: 22px;
+}
+
+#footer h4 {
+	color: #d1d5d8;
+	font-size: 14px;
+	line-height: 30px;
+	font-family: 'pf_square_sans_promedium';
+	padding-top: 43px;
+	text-align: right;
+}
+
+footer ul {
+	padding-top: 38px;
+}
+
+/*------------------------------footer-----------------------*/
+.top {
+	bottom: 30px;
+	right: 20px;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	position: fixed;
+}

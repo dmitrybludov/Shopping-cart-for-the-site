@@ -1,0 +1,315 @@
+
+@media (min-width: 1200px) {
+	.container {
+		max-width: 960px;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	.container {
+		max-width: 960px;
+	}
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	
+	body {
+		padding-top: 102px;
+	}
+
+	.mail {
+		margin: 24px auto 25px auto;
+	}
+
+	.navbar-light .navbar-nav .nav-link {
+		font-size: 20px;
+	}
+
+	.display {
+		float: none;
+		display: block;
+		margin: -110px auto 0 auto;
+	}
+
+	.mobileApp h2 {
+		padding-top: 40px;
+	}
+
+	.mobileApp p {
+		text-align: justify;
+	}
+
+	.webDesign h1 {
+		text-align: center;
+	}
+
+	.picture_webDesign {
+		margin-top: 0;
+	}
+
+	.notebook {
+		display: block;
+		margin: 0 auto;
+		padding-bottom: 35px;
+	}
+
+	.btn-primary {
+		margin-top: 50px;
+	}
+
+	.Java p {
+		padding-top: 25px;
+	}
+
+	#footer h4 {
+		padding-top: 10px;
+		font-size: 23px;
+		text-align: center;
+	}
+	
+	.ourTeam {
+		padding: 60px 0 0 0;
+	}
+
+	.software {
+		padding: 85px 0 85px 0;
+	}
+
+	footer ul {
+		padding-top: 15px;
+	}
+}
+
+@media (min-width: 544px) and (max-width: 767px) {
+
+	body {
+		padding-top: 70px;
+	}
+	
+	.aboutUs-content {
+		padding: 46px 0 0 10px;
+	}
+
+	.navbar-light .navbar-nav .nav-link {
+		font-size: 19px;
+	}
+
+	.nav {
+		float: right;
+		padding-top: 10px;
+	}
+
+	.display {
+		float: none;
+		margin: 0 auto;
+		margin-top: -30px;
+	}
+
+	.mobileApp h2 {
+		padding-top: 10%;
+		color: #373f51;
+		border-bottom: 2px solid #373f51;
+	}
+	
+	.mobileApp li {
+		color: #373f51;
+		list-style-image: url(../img/Rectangle-6.png);
+	}
+
+	.mobileApp p {
+		text-align: justify;
+	}
+	
+	.webDesign {
+		padding: 80px 0 0 0;
+ 	}
+
+	.webDesign h1 {
+		text-align: center;
+    	line-height: 50px;
+    	padding-top: 40px;
+	}
+
+	.picture_webDesign {
+		margin-top: 0;
+		padding-bottom: 40px;
+	}
+
+	.btn-primary {
+		margin-top: 30px;
+	}
+
+	.wrapper .container {
+		padding-top: 0;
+	}
+	
+	.Java {
+		padding: 80px 0 0 0;
+	}
+
+	.Java ul {
+		margin-right: 15px;
+	}
+
+	.Java h2 {
+		padding: 35px 0 10px 0;
+	}
+
+	.Java h3 {
+		font-size: 20px;
+	}
+
+	.Java li {
+		padding: 8px 10px 23px 0px;	
+	}
+	
+	.software {
+		padding: 85px 0 85px 0;
+	}
+
+	#footer p {
+		padding-top: 15px;
+	}
+
+	#footer h4 {
+		padding-top: 25px;
+		text-align: center;
+	}
+
+	footer ul {
+		padding-top: 25px;
+	}
+}
+
+@media (min-width: 319px) and (max-width: 543px) {
+	
+	body {
+		padding-top: 60px;
+	}
+
+	.navbar-light .navbar-nav .nav-link {
+		font-size: 13px;
+	}
+
+	header {
+		min-height: 60px;
+	}
+
+	.nav {
+		float: left;
+	}
+	
+	.aboutUs-content {
+    	padding: 20px 0 0px 10px;
+	}
+
+	.display {
+		float: none;
+		margin: 0 auto;
+	}
+
+	#aboutUs li {
+		padding-left: 5px;
+	}
+
+	.mobileApp {
+		margin-top: 0;
+	}
+
+	.mobileApp h2 {
+		padding-top: 45px;
+		margin-left: 0;
+		color: #373f51;
+		border-color: #373f51;
+	}
+
+	.mobileApp li {
+		color: #373f51;
+		padding-left: 0;
+	}
+
+	.mobileApp ul {
+		padding: 15px 0 0 20px;
+		list-style-image: url(../img/Rectangle-6.png);
+	}
+	
+	.Java {
+		padding: 65px 0 0 0;
+	}
+
+	.Java ul {
+		margin-right: 12px;
+	}
+	
+	.javaList li {
+		text-align: right;
+		padding: 8px 0px 23px 0px;
+	}
+	
+	.Java h2 {
+		padding: 20px 0 10px 0;
+	}
+
+	.Java h3 {
+		padding: 10px 0 15px 0;
+	}
+
+	#aboutUs li, .software p, .mobileApp p, .mobileApp li, .webDesign p, .Java h3, .javaList li, .Java p {
+		font-size: 19px;
+	}
+
+	.webDesign h1 {
+		font-size: 35px;
+		text-align: center;
+	}
+
+	.webDesign h2 {
+		font-size: 30px;
+	}
+
+	.picture_webDesign {
+		margin-top: 0;
+	}
+
+	#ourTeam .container {
+		padding-top: 70px;
+	}
+
+	#ourTeam h1 {
+		padding-bottom: 60px;
+	}
+
+	#ourTeam img {
+		display: block;
+		margin: 0 auto;
+	}
+
+	.btn-primary {
+		margin: 45px auto 0 auto;
+		display: table;
+		float: none; 
+	}
+
+	.software {
+		padding: 85px 0 50px 0;
+	}
+
+	#footer h4 {
+		padding-top: 0px;
+		text-align: center;
+	}
+
+	#footer p {
+		text-align: center;
+	}
+
+	footer ul {
+		padding-top: 0;
+	}
+
+	.logo_footer {
+		display: block;
+		margin: 0 auto;
+	}
+}
