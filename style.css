@@ -1,0 +1,536 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* css_rest_end */
+/* general_start */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+	font-size: 10px;
+}
+
+body {
+	font-size: 1.6rem;
+    background: #fff;
+    font-family: 'Lato', sans-serif;
+    color: #25254e;
+}
+
+a,span {
+	display: inline-block;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+form * {
+	outline: 0;
+}
+
+.fa:before {
+	font-family: FontAwesome;
+}
+
+/* general_end */
+
+/* font-family: 'Roboto', sans-serif; */
+/* font-family: 'Montserrat', sans-serif; */
+
+.container {
+    width: 1170px;
+    margin: 100px auto 0 auto;
+    display: flex;
+}
+
+.card_product {
+    width: 25%;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.card_title {
+    font-size: 2rem;
+    margin: 20px 0 10px 0;
+    position: relative;
+    padding: 0 0 20px 0;
+}
+
+.card_title::after {
+    position: absolute;
+    content: "";
+    background: url("../img/rating.png");
+    width: 75px;
+    height: 12px;
+    left: 0;
+    bottom: 0;
+}
+
+.price_quality {
+    margin: 15px 0 25px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.price_quality>.price {
+    font-size: 3rem;
+    width: 105px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 0 0 0 16px;
+}
+
+.price_quality>.price::before {
+    content: '$';
+    position: absolute;
+    left: 0;
+}
+
+.price_quality>.price::after {
+    content: '$30';
+    position: absolute;
+    font-size: 2rem;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    text-decoration: line-through;
+    color: #ccc;
+}
+
+.quality {
+    display: flex;
+}
+
+.quality>span {
+    padding: 10px 5px;
+    margin: 0 0 0 5px;
+    background: #03bb4d;
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+.buy_btn {
+    font-size: 1.5rem;
+    padding: 15px 0;
+    text-align: center;
+    position: relative;
+    background: #ffa820;
+    text-transform: uppercase;
+    border: 2px solid #ffa820;
+    transition: all .3s ease;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.buy_btn:hover {
+    background: #fff;
+    color: #ffa820;
+    font-weight: 700;
+}
+
+.modal_window {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(37, 37, 78, .8);
+    display: none;
+}
+
+.modal_content_area {
+    font-family: 'Roboto', sans-serif;
+    width: 750px;
+    height: 500px;
+    top: 50%;
+    transform: translateY(-50%);
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    background: #fff;
+    border-radius: 5px;
+    padding: 20px 0 0 0;
+}
+
+.content_area_heading {
+    color: #03bb4d;
+    font-size: 3rem;
+    text-align: center;
+    width: 100%;
+    margin: 0 0 20px 0;
+}
+
+.content_area_product {
+    width: 40%;
+    padding: 0 0 0 30px;
+}
+
+.content_area_form {
+    width: 60%;
+    padding: 0 30px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form_input {
+    height: 30px;
+    width: 100%;
+    margin: 0 0 20px 0;
+    border: none;
+    text-indent: 5px;
+    box-shadow: 0px 5px 15px 1px rgba(37, 37, 78, 0.5);
+    opacity: 1;
+    transition: opacity .3s ease;
+}
+
+.form_input::-webkit-input-placeholder
+    {color:#25254e; font-family: 'Roboto', sans-serif;}
+.form_input::-moz-placeholder
+    {color:#25254e; font-family: 'Roboto', sans-serif;}
+.form_input:-moz-placeholder
+    {color:#25254e; font-family: 'Roboto', sans-serif;}
+.form_input:-ms-input-placeholder
+    {color:#25254e; font-family: 'Roboto', sans-serif;}
+
+.form_input:focus::-webkit-input-placeholder
+    {opacity: 0; transition: opacity 0.3s ease;}
+.form_input:focus::-moz-placeholder:hover
+    {opacity: 0; transition: opacity 0.3s ease;}
+.form_input:focus:-moz-placeholder:hover
+    {opacity: 0; transition: opacity 0.3s ease;}
+.form_input:focus:-ms-input-placeholder:hover
+    {opacity: 0; transition: opacity 0.3s ease;}
+
+.content_area_submit {
+    padding: 15px 0;
+    width: 100%;
+    background: #ffa820;
+    border: 2px solid #ffa820;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.content_area_submit:hover {
+    cursor: pointer;
+    background: #03bb4d;
+}
+
+.close_modal_window {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 2rem;
+    color: #ffa820;
+}
+
+.form_textarea {
+    resize: none;
+    border: none;
+    box-shadow: 0px 5px 15px 1px rgba(37, 37, 78, 0.5);
+    margin: 0 0 40px 0;
+    font-family: 'Roboto', sans-serif;
+    text-indent: 3px;
+}
+
+.form_textarea::-webkit-input-placeholder
+    {color:#25254e; font-family: 'Roboto', sans-serif;}
+.form_textarea::-moz-placeholder
+    {color:#25254e; font-family: 'Roboto', sans-serif;}
+.form_textarea:-moz-placeholder
+    {color:#25254e; font-family: 'Roboto', sans-serif;}
+.form_textarea:-ms-input-placeholder
+    {color:#25254e; font-family: 'Roboto', sans-serif;}
+
+.form_textarea:focus::-webkit-input-placeholder
+    {opacity: 0; transition: opacity 0.3s ease;}
+.form_textarea:focus::-moz-placeholder:hover
+    {opacity: 0; transition: opacity 0.3s ease;}
+.form_textarea:-moz-placeholder:hover
+    {opacity: 0; transition: opacity 0.3s ease;}
+.form_textarea:-ms-input-placeholder:hover
+    {opacity: 0; transition: opacity 0.3s ease;}
+
+.error {
+    background: rgba(255,0,0, .6);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.shopping_cart_modal {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(37, 37, 78, .8);
+    display: none;
+}
+
+.modal_active {
+    display: block;
+}
+
+.shopping_cart {
+    width: 960px;
+    position: relative;
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 5px;
+}
+.shopping_cart_header {
+    height: 60px;
+    background: #0a4f7b;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.shopping_cart_title {
+    text-transform: capitalize;
+    color: #fefefe;
+    font-size: 1.8rem;
+}
+
+.shopping_cart_body {
+    background: #fff;
+    padding: 20px;
+}
+
+.body_options_row {
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    font-size: 1.3rem;
+    color: #333333;
+    background: #f4f4f4;
+    border-radius: 5px;
+    height: 40px;
+    padding: 0 20px;
+}
+
+.body_options_row>div,.product_row>div {
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.body_options_row>div:nth-child(2),.product_row>div:nth-child(2) {
+    flex-grow: 4;
+}
+
+.product_wrap {
+    max-height: 250px;
+    overflow: auto;
+}
+
+.product_row {
+    padding: 20px;
+    height: 125px;
+    border-bottom: 1px solid #f4f4f4;
+    display: flex;
+    align-items: center;
+    color: #333;
+    font-size: 1.6rem;
+}
+
+.product_row>.miniature {
+    display: flex;
+    align-items: center;
+}
+
+.product_row>.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.description>.description_name {
+    color: #094e7a;
+}
+
+.description>.description_code {
+    font-size: 1.3rem;
+}
+
+.quantity input {
+    width: 55px;
+    height: 30px;
+    border-radius: 5px;
+    text-indent: 35%;
+    font-size: 1.6rem;
+}
+
+.miniature>img {
+    width: 75px;
+    border: 2px solid #fff;
+    outline: 1px solid #dddddd;
+}
+
+.shopping_cart_footer {
+    padding: 0 20px 60px 20px;
+    height: 190px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.total_price {
+    padding: 15px 10px 20px 10px;
+    background: #f4f4f4;
+    color: #333333; 
+    font-size: 2.4rem;
+}
+.btn_row {
+    width: 320px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn_row>.back_btn {
+    padding: 10px 30px;
+    background: #3f3f3f;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+.btn_row>.continue_btn {
+    padding: 10px;
+    background: #0b507c;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+.add_card_btn {
+    background: #0b507c;
+    margin: 10px 0 0 0;
+    border: 2px solid #0b507c;
+    font-size: 1.5rem;
+    padding: 15px 0;
+    text-align: center;
+    position: relative;
+    background: #0b507c;
+    text-transform: uppercase;
+    transition: all .3s ease;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.add_card_btn:hover {
+    background: #fff;
+    color: #0b507c;
+    font-weight: 700;
+}
+
+.advertising {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #0a4f7b;
+    width: 300px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.advertising_button {
+    padding: 15px 25px;
+    background: #ffa820;
+}
+
+.advertising_active {
+    visibility: visible;
+}
