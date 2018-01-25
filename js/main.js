@@ -81,7 +81,7 @@ var $form = $(".form");
 $(function () {
     var $addCartBtn = $(".add_card_btn");
     var $productWrap = $(".product_wrap");
-    var productRow = '<div class="product_row">    <div class="miniature">            </div>    <div class="description">        <p class="description_name"></p>        <p class="description_code">product code:</p>    </div>    <div class="quantity">        <input type="number" min="1" max="10" step="1" placeholder="1" value="1">    </div>    <div class="price">        <p></p>    </div>    <div class="total">        <p></p>    </div></div>';
+    var productRow = '<div class="product_row">    <div class="miniature">            </div>    <div class="description">        <p class="description_name"></p>        <p class="description_code">product code:</p>    </div>    <div class="quantity">        <input type="number" min="1" max="10" step="1" placeholder="1" value="1" onkeypress="return false">    </div>    <div class="price">        <p></p>    </div>    <div class="total">        <p></p>    </div></div>';
     var $totalPrice = $(".total_price>span");
     var $shoppingCart = $(".shopping_cart_modal");
     var $closeBtn = $(".back_btn");
