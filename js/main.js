@@ -79,10 +79,8 @@ var $form = $(".form");
 }) */
 
 $(function () {
-    var $addCartBtn = $(".add_card_btn");
     var $productWrap = $(".product_wrap");
-    var productRow = '<div class="product_row">    <div class="miniature">            </div>    <div class="description">        <p class="description_name"></p>        <p class="description_code">product code:</p>    </div>    <div class="quantity">        <input type="number" min="1" max="10" step="1" placeholder="1" value="1">    </div>    <div class="price">        <p></p>    </div>    <div class="total">        <p></p>    </div></div>';
-    var $totalPrice = $(".total_price>span");
+    var $addCartBtn = $(".add_card_btn");
     var $shoppingCart = $(".shopping_cart_modal");
     var $closeBtn = $(".back_btn");
 
@@ -109,34 +107,33 @@ $(function () {
     });
 
     $addCartBtn.click(function () {
-        $productWrap.append(productRow);
-        var image = $(this).siblings("img").clone();
+        var image = $(this).siblings("img").attr('src');
+        var imageAlt = $(this).siblings("img").attr('alt');
         var descriptionName = $(this).siblings("h4").text();
         var descriptionCode = $(this).siblings("h4").data("code");
-        var price = $(this).siblings(".price_quality").children(".price").text();
-        $productWrap.children().last().children(".miniature").append(image);
-        $productWrap.children().last().children(".description").children(".description_name").append(descriptionName);
-        $productWrap.children().last().children(".description").children(".description_code").append(descriptionCode);
-        $productWrap.children().last().children(".price").children("p").append(price);
-        $productWrap.children().last().children(".total").children("p").append(price);
-        $("input").on("change keydown keypress keyup click", function () {
-            var perem1 = $(this).val();
-            var perem2 = $(this).parent().siblings('.price').children().text();
-            var perem3 = $(this).parent().siblings('.total').children();
-            var res = perem1 * perem2;
-            $(this).parent().siblings('.total').children("p").text(res);
-            /* var summArray = [];
-            $(".total>p").each(function(indx, element){
-                summArray.push($(element).text());
-            }); */
+        var priceProduct = $(this).siblings(".price_quality").children(".price").text();
+        var productRow = '<div class="product_row"><div class="miniature"><img src="' + image + '" alt="'+ imageAlt + '"></div><div class="description"><h4 class="description_name">' + descriptionName + '</h4><p class="description_code">product code:'+ descriptionCode + '</p></div><div class="quantity"><input type="number" min="1" max="10" step="1" placeholder="1" value="1" autofocus></div><div class="price">'+ priceProduct + '<p></p></div><div class="total"><p>' + priceProduct + '</p></div></div>';
+
+        $productWrap.append(productRow);
+        var total = 0;
+        $(".total>p").each(function () {
+            var price = $(this).text();
+            total += +price;
+        });
+        $("input").on("change focusout keydown keypress keyup click", function () {
+            var inputValue = $(this).val();
+            var priceItem = $(this).parent().siblings('.price').text();
+            var totalItem = $(this).parent().siblings('.total').children();
+            var result = inputValue * priceItem;
+            $(this).parent().siblings('.total').children("p").text(result);
             var total = 0;
             $(".total>p").each(function () {
                 var price = $(this).text();
                 total += +price;
             });
-            $($totalPrice).text(total);
-            /* console.log(parseInt(summArray)); */
+            $(".total_price>span").text(total);
         });
+        $(".total_price>span").text(total);
     });
 })
 
