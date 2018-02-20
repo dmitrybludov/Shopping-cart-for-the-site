@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&amp;subset=cyrillic" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Корзина на Jquery</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card_product">
+            <img src="img/Layer 22.jpg" alt="movie cover">
+            <h4 class="card_title" data-code="001">Lucy - 2014</h4>
+            <div class="price_quality">
+                <p class="price" data-oldprice="$30">20</p>
+                <div class="quality">
+                    <span>3D</span>
+                    <span>1080p</span>
+                    <span>720p</span>
+                </div>
+            </div>
+            <a href="#" class="add_card_btn">Добавить в корзину</a>
+        </div>
+        <div class="card_product">
+            <img src="img/img.png" alt="movie cover">
+            <h4 class="card_title" data-code="002">The amazing Spiderman</h4>
+            <div class="price_quality">
+                <p class="price" data-oldprice="$30">25</p>
+                <div class="quality">
+                    <span>1080p</span>
+                    <span>720p</span>
+                </div>
+            </div>
+            <a href="#" class="add_card_btn">Добавить в корзину</a>
+        </div>
+        <div class="card_product">
+            <img src="img/Layer 26.jpg" alt="movie cover">
+            <h4 class="card_title" data-code="003">Divergent - 2014</h4>
+            <div class="price_quality">
+                <p class="price" data-oldprice="$30">25</p>
+                <div class="quality">
+                    <span>3D</span>
+                    <span>1080p</span>
+                    <span>720p</span>
+                </div>
+            </div>
+            <a href="#" class="add_card_btn">Добавить в корзину</a>
+        </div>
+        <div class="card_product">
+            <img src="img/Layer 34.png" alt="movie cover">
+            <h4 class="card_title" data-code="004">The hunger games</h4>
+            <div class="price_quality">
+                <p class="price" data-oldprice="$30">20</p>
+                <div class="quality">
+                    <span>3D</span>
+                    <span>1080p</span>
+                    <span>720p</span>
+                </div>
+            </div>
+            <a href="#" class="add_card_btn">Добавить в корзину</a>
+        </div>
+    </div>
+    <!-- <div class="modal_window">
+        <div class="modal_content_area">
+            <h3 class="content_area_heading">Форма заказа</h3>
+            <div class="content_area_product"></div>
+            <div class="content_area_form">
+                <form action="#" method="POST" class="form">
+                    <input type="text" name="name" placeholder="Введите имя" class="form_input">
+                    <input type="email" name="email" placeholder="Введите E-mail" class="form_input">
+                    <input type="tel" name="tel" placeholder="Введите номер телефона" class="form_input">
+                    <textarea class="form_textarea" rows="6" placeholder="Сообщение"></textarea>
+                    <button type="submit" class="content_area_submit">Отправить</button>
+                </form>
+            </div>
+            <a href="#" class="close_modal_window">X</a>
+        </div>
+    </div> -->
+    <div class="shopping_cart_modal">
+        <div class="shopping_cart">
+            <div class="shopping_cart_header">
+                <p class="shopping_cart_title">shopping cart experience</p>
+            </div>
+            <div class="shopping_cart_body">
+                <div class="body_options_row">
+                    <div>
+                        <p>image</p>
+                    </div>
+                    <div>
+                        <p>product description</p>
+                    </div>
+                    <div>
+                        <p>quantity</p>
+                    </div>
+                    <div>
+                        <p>price</p>
+                    </div>
+                    <div>
+                        <p>total</p>
+                    </div>
+                </div>
+                <div class="product_wrap">
+                    <!-- <div class="product_row">
+                        <div class="miniature">
+                            <img src="img/Layer 22.jpg" alt="alt">
+                        </div>
+                        <div class="description">
+                            <h4 class="description_name">Lucy - 2014</h4>
+                            <p class="description_code">product code:<span></span></p>
+                        </div>
+                        <div class="quantity">
+                            <input type="number" min="1" max="10" step="1" placeholder="1" value="1">
+                        </div>
+                        <div class="price">
+                            <p></p>
+                        </div>
+                        <div class="total">
+                            <p></p>
+                        </div>
+                        <a href="#" class="delete_item fa fa-times"></a>
+                    </div> -->
+                </div>
+            </div>
+            <div class="shopping_cart_footer">
+                <p class="total_price">Total $
+                    <span></span>
+                </p>
+                <div class="btn_row">
+                    <a href="#" class="back_btn">Back to Shop</a>
+                    <a href="#" class="continue_btn" data-toggle="modal" data-target="#checkout">Continue to Checkout</a>
+                </div>
+            </div>
+        </div>
+        <form method="POST" id="forma_zakaza" class="forma_zakaza d-flex flex-column align-items-center">
+            <h3 class="head mb-5">Форма заказа</h3>
+            <input type="name" name="name" placeholder="Введите имя" class="form_input">
+            <input type="email" name="email" placeholder="Введите E-mail" class="form_input">
+            <input type="tel" name="tel" placeholder="Введите номер телефона" class="form_input">
+            <textarea name="comment" class="form_textarea" rows="6" placeholder="Сообщение"></textarea>
+            <input type="text" name="text" class="hiddenInput form_input">
+            <input type="submit" class="button form_submit" value="Отправить"></input>
+            <a href="#" class="close_forma_zakaza fa fa-times" aria-hidden="true"></a>
+            <div class="zakaz_ok">
+                ok;)
+            </div>
+        </form>
+    </div>
+    <p class="fa fa-shopping-basket basket_icon" aria-hidden="true"></p>
+    <!-- <script src="js/bootstrap.bundle.min.js"></script> -->
+    <script src="js/fontawesome.v4.js"></script>
+    <script src="js/main_main.js"></script>
+</body>
+
+</html>
